@@ -1,0 +1,170 @@
+@import "../../styles/mixins";
+
+.containerWrapper {
+  padding: 66px 24px 64px;
+
+  @include tablet {
+    padding: 56px 40px;
+    width: 100%;
+  }
+
+  @include desktop {
+    padding: 58px 0;
+  }
+}
+
+.container {
+  @include flexCenter(column);
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  .homeLinks {
+    @include flexCenter(column);
+    gap: 24px;
+    text-align: center;
+
+    .links {
+      @include flexCenter(column);
+      align-items: center;
+      gap: 24px;
+
+      img {
+        width: 96px;
+        height: 24px;
+        flex-shrink: 0;
+      }
+
+      nav {
+        @include flexCenter(row);
+        gap: 24px;
+        list-style: none;
+
+        li {
+          display: inline-block;
+        }
+
+        a {
+          color: $primary-color-300;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 25px; /* 166.667% */
+
+          text-decoration: none;
+
+          &:hover {
+            color: $primary-color-200;
+          }
+        }
+      }
+    }
+
+    .address {
+      color: $primary-color-300;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 25px; /* 166.667% */
+
+      opacity: 0.6;
+    }
+  }
+
+  .socialLinks {
+    @include flexCenter(column);
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    nav {
+      @include flexCenter(row);
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      width: 104px;
+
+      li {
+        display: inline-block;
+      }
+
+      a:hover {
+        svg path{
+            fill: $primary-color-200;
+        }
+      }
+    }
+
+    p {
+      color: $primary-color-300;
+      text-align: center;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px; /* 166.667% */
+
+      opacity: 0.6;
+    }
+  }
+
+  @include tablet {
+    gap: 32px;
+    align-items: normal;
+    justify-content: flex-start;
+
+    .homeLinks {
+      @include flexCenter(row);
+      justify-content: space-between;
+
+      .links {
+        align-items: normal;
+        gap: 0;
+        justify-content: space-between;
+      }
+
+      .address {
+        text-align: right;
+      }
+    }
+
+    .socialLinks {
+      @include flexCenter(row);
+      justify-content: space-between;
+      gap: 0;
+
+      p {
+        text-align: right;
+      }
+    }
+  }
+
+  @include desktop {
+    @include maxWidth;
+    @include flexCenter(row);
+    justify-content: space-between;
+
+    .homeLinks {
+      justify-content: flex-start;
+      gap: 125px;
+
+      .links {
+        justify-content: flex-start;
+        gap: 25px;
+
+        img {
+          width: 160px;
+          height: 40px;
+        }
+      }
+
+      .address {
+        text-align: left;
+      }
+    }
+
+    .socialLinks {
+        @include flexCenter(column);
+        align-items: flex-end;
+    }
+  }
+}

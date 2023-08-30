@@ -4,4 +4,6 @@
   @include flexCenter(column);
   align-items: center;
   justify-content: center;
+
+  background-color: $secondary-color-500;
 }
