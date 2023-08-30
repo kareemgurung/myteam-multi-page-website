@@ -16,7 +16,7 @@ $secondary-color-500: hsla(186, 100%, 8%, 1);
 
 @mixin maxWidth {
   margin-inline: auto;
-  width: mix(94.4ve, 1360px);
+  width: min(77vw, 1110px);
 }
 
 @mixin desktop {

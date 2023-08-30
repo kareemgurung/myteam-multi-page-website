@@ -1,0 +1,71 @@
+@import "../../styles/mixins";
+
+.container {
+  @include flexCenter(column);
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding-block: 83px;
+  padding-inline: 24px;
+  width: 100%;
+
+  background-color: $primary-color-200;
+
+  position: relative;
+  overflow: hidden;
+
+  h2 {
+    color: $secondary-color-400;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 100% */
+  }
+
+  &::after {
+    content: url("../../../public/images/bg-pattern-home-6-about-5.svg");
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+  }
+
+  @include tablet {
+    @include flexCenter(row);
+    gap: 84px;
+    padding-block: 76px;
+    padding-inline: 0;
+  }
+
+  @include desktop {
+    gap: 260px;
+
+    &::after {
+        bottom: -5px;
+    }
+
+    h2 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+  }
+}
+
+.contactButton {
+  display: block;
+  border-radius: 24px;
+  border: 2px solid $secondary-color-400;
+  background-color: inherit;
+
+  color: $secondary-color-400;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
+
+  text-align: center;
+
+  width: 153px;
+  height: 48px;
+
+  cursor: pointer;
+}

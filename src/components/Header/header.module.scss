@@ -1,14 +1,19 @@
 @import "../../styles/mixins";
 
 .header {
+
+  background: $primary-color-100;
+  align-items: center;
+
+  position: relative;
+}
+
+.headerWrapper {
   @include flexCenter(row);
   align-items: center;
   justify-content: space-between;
 
   padding: 48px 24px 0px;
-  background: $primary-color-100;
-
-  position: relative;
 }
 
 .logo {
@@ -117,7 +122,7 @@
 }
 
 @include tablet {
-  .header {
+  .headerWrapper {
     justify-content: flex-start;
     gap: 48px;
     padding: 64px 40px 0px;
@@ -156,9 +161,10 @@
 }
 
 @include desktop {
-  .header {
+  .headerWrapper {
+    @include maxWidth;
     gap: 80px;
-    padding: 77px 165px 0px;
+    padding-top: 77px;
   }
 
   .logo {

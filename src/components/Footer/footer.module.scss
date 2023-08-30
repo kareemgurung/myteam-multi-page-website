@@ -1,0 +1,7 @@
+@import "../../styles/mixins";
+
+.container {
+  @include flexCenter(column);
+  align-items: center;
+  justify-content: center;
+}
