@@ -1,9 +1,7 @@
 @import "../../styles/mixins";
 
 .header {
-
   background: $primary-color-100;
-  align-items: center;
 
   position: relative;
 }
@@ -64,6 +62,10 @@
       line-height: 28px; /* 155.556% */
 
       text-decoration: none;
+
+      &:hover {
+        color: $primary-color-200;
+      }
     }
   }
 }
@@ -165,6 +167,7 @@
     @include maxWidth;
     gap: 80px;
     padding-top: 77px;
+    padding-inline: 0;
   }
 
   .logo {

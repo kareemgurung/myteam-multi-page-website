@@ -1,15 +1,21 @@
 @import "../../styles/mixins";
 
+.containerWrapper {
+  width: 100%;
+  background-color: $primary-color-200;
+}
+
 .container {
   @include flexCenter(column);
+  
   align-items: center;
   justify-content: center;
   gap: 24px;
   padding-block: 83px;
   padding-inline: 24px;
-  width: 100%;
+  background-color: inherit;
 
-  background-color: $primary-color-200;
+  
 
   position: relative;
   overflow: hidden;
@@ -38,10 +44,13 @@
   }
 
   @include desktop {
+    @include maxWidth;
     gap: 260px;
+    overflow: visible;
 
     &::after {
-        bottom: -5px;
+        bottom: -6px;
+        left: -165px;
     }
 
     h2 {
