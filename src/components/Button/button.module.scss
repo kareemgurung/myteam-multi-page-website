@@ -15,20 +15,48 @@
   height: 48px;
 
   cursor: pointer;
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
-.primary {
+.light {
   border-color: $primary-color-300;
   color: $primary-color-300;
 
   @include tablet {
     width: 153px;
   }
+
+  &:hover {
+    background-color: $primary-color-300;
+    color: $primary-color-100;
+  }
+}
+
+.dark {
+  border-color: $secondary-color-400;
+  color: $secondary-color-400;
+
+  width: 153px;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    background-color: $secondary-color-400;
+    color: $primary-color-300;
+  }
 }
 
 .secondary {
-    border-color: $secondary-color-400;
-    color: $secondary-color-400;
+  width: 123px;
+  border-color: $primary-color-300;
+  background-color: $primary-color-300;
+  color: $secondary-color-500;
 
-    width: 153px;
+  &:hover {
+    border-color: transparent;
+    background-color: $secondary-color-100;
+  }
 }

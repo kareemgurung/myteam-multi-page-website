@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./contactfooter.module.scss";
+import Button from "../Button/Button";
 
 const ContactFooter = () => {
   const navigate = useNavigate();
@@ -7,13 +8,11 @@ const ContactFooter = () => {
     <div className={styles.containerWrapper}>
       <div className={styles.container}>
         <h2>Ready to get started?</h2>
-        <button
-          type="button"
-          className={styles.contactButton}
+        <Button
           onClick={() => navigate("./contact")}
-        >
-          contact us
-        </button>
+          name="contact us"
+          color="dark"
+        />
       </div>
     </div>
   );

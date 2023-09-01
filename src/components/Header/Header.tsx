@@ -58,7 +58,7 @@ const Header = () => {
               showMenuHandler();
             }}
             name="contact us"
-            color="red"
+            color="light"
           />
         </div>
         <div

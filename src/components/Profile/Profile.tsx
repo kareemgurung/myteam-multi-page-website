@@ -1,6 +1,5 @@
-
 import styles from "./profile.module.scss";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Social from "../SocialLink/Social";
 
 type ProfileProps = {
@@ -12,7 +11,6 @@ type ProfileProps = {
 
 const Profile: React.FC<ProfileProps> = ({ name, quote, position, image }) => {
   const [showQuote, setShowQuote] = useState(false);
-
 
   const quoteHandler = () => {
     setShowQuote((prevState) => !prevState);
@@ -35,8 +33,8 @@ const Profile: React.FC<ProfileProps> = ({ name, quote, position, image }) => {
             <p>{quote}</p>
           </div>
           <div className={styles.socials}>
-            <Social image="../../../images/icon-twitter.svg" name="twitter"/>
-            <Social image="../../../images/icon-linkedin.svg" name="linkedin"/>
+            <Social image="../../../images/icon-twitter.svg" name="twitter" />
+            <Social image="../../../images/icon-linkedin.svg" name="linkedin" />
           </div>
         </div>
       )}
