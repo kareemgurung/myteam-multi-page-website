@@ -31,3 +31,7 @@ $secondary-color-600: hsla(179, 100%, 88%, 1);
     @content;
   }
 }
+
+@mixin transition {
+  transition: all 0.3s ease;
+}

@@ -83,24 +83,6 @@
   right: 25px;
 }
 
-.contactButton {
-  display: block;
-  border-radius: 24px;
-  border: 2px solid $primary-color-300;
-  background-color: inherit;
-
-  color: $primary-color-300;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px; /* 155.556% */
-
-  text-align: center;
-
-  width: 159px;
-  height: 48px;
-
-  cursor: pointer;
-}
 
 .active {
   right: 0;
@@ -157,9 +139,6 @@
     display: none;
   }
 
-  .contactButton {
-    width: 153px;
-  }
 }
 
 @include desktop {

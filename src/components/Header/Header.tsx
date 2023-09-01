@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./header.module.scss";
 import { useState } from "react";
+import Button from "../Button/Button";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -51,16 +52,14 @@ const Header = () => {
               </Link>
             </li>
           </nav>
-          <button
-            type="button"
+          <Button
             onClick={() => {
               navigate("/contact");
               showMenuHandler();
             }}
-            className={styles.contactButton}
-          >
-            contact us
-          </button>
+            name="contact us"
+            color="red"
+          />
         </div>
         <div
           className={

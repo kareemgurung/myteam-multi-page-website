@@ -1,0 +1,290 @@
+@import "../../styles/mixins";
+
+main {
+  @include flexCenter(column);
+}
+
+.container1,
+.container2,
+.container3 {
+  width: 100%;
+}
+
+.container1 {
+  background-color: $primary-color-100;
+}
+.container2 {
+  background-color: $secondary-color-300;
+}
+.container3 {
+  background-color: $secondary-color-400;
+}
+
+.hero1,
+.hero2,
+.hero3 {
+  @include desktop {
+    @include maxWidth;
+  }
+}
+
+.hero1 {
+  @include flexCenter(column);
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 80px 24px 108px;
+
+  color: $primary-color-300;
+  text-align: center;
+
+  overflow: hidden;
+  position: relative;
+
+  h1 {
+    padding-inline: 55px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px; /* 100% */
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px; /* 186.667% */
+  }
+
+  &::before {
+    content: url("../../../public/images/bg-pattern-about-1-mobile-nav-1.svg");
+    position: absolute;
+    bottom: -105px;
+    right: -100px;
+  }
+
+  @include tablet {
+    gap: 24px;
+    padding: 112px 40px 112px 45px;
+
+    h1 {
+      font-size: 64px;
+      line-height: 56px;
+      padding-inline: 150px;
+    }
+    p {
+      padding-inline: 110px 116px;
+    }
+
+    &::before {
+      bottom: -6px;
+    }
+  }
+
+  @include desktop {
+    @include flexCenter(row);
+    gap: 0;
+    padding: 120px 0 0;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+
+    overflow: visible;
+
+    h1,
+    p {
+      padding-inline: 0;
+    }
+
+    h1 {
+      font-size: 64px;
+      line-height: 100px;
+    }
+
+    p {
+      font-size: 18px;
+      flex-basis: 730px;
+      padding-top: 50px;
+      padding-bottom: 120px;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 50px;
+        height: 4px;
+        flex-shrink: 0;
+        background: $primary-color-200;
+
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    &::before {
+      right: -250px;
+    }
+  }
+}
+
+.hero2 {
+  @include flexCenter(column);
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 88px 24px 116px;
+
+  overflow: hidden;
+  position: relative;
+
+  h2 {
+    color: $primary-color-300;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px; /* 100% */
+  }
+
+  .profileContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 52px;
+    width: 100%;
+  }
+
+  &::before {
+    content: url("../../../public/images/bg-pattern-about-2-contact-1.svg");
+    position: absolute;
+    top: -100px;
+    left: -100px;
+  }
+
+  &::after {
+    content: url("../../../public/images/bg-pattern-home-4-about-3.svg");
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+  }
+
+  @include tablet {
+    padding: 100px 98px 128px;
+
+    .profileContainer {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 11px;
+      row-gap: 76px;
+    }
+
+    &::before {
+      top: 0;
+    }
+  }
+
+  @include desktop {
+    gap: 64px;
+    padding: 140px 0 168px;
+
+    overflow: visible;
+
+    h2 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    .profileContainer {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 30px;
+    }
+
+    &::before {
+      left: -265px;
+    }
+
+    &::after {
+      right: -165px;
+    }
+  }
+}
+
+.hero3 {
+  @include flexCenter(column);
+  align-items: center;
+  gap: 64px;
+  padding: 88px 24px;
+
+  overflow: hidden;
+  position: relative;
+
+  h2 {
+    color: $primary-color-300;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px; /* 100% */
+  }
+
+  ul {
+    @include flexCenter(column);
+    align-items: center;
+    justify-content: center;
+    gap: 57px;
+    list-style: none;
+    flex: 1;
+
+    li {
+      display: inline-block;
+    }
+
+    img {
+      margin-inline: auto;
+      width: 50%;
+    }
+  }
+
+  &::before {
+    content: url("../../../public/images/bg-pattern-about-4.svg");
+    position: absolute;
+    top: -100px;
+    left: -100px;
+  }
+
+  @include tablet {
+    gap: 52px;
+    padding: 100px 40px;
+
+    ul {
+      @include flexCenter(row);
+      gap: 0;
+      justify-content: space-between;
+
+      img {
+        margin-inline: 0;
+        width: 75%;
+      }
+    }
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  @include desktop {
+    gap: 70px;
+    padding: 140px 0;
+
+    overflow: visible;
+
+    h2 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    ul {
+        img {
+            width: 65%;
+        }
+    }
+
+    &::before {
+      top: 0;
+      left: -165px;
+    }
+  }
+}
