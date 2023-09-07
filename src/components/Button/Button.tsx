@@ -2,11 +2,19 @@ import styles from "./button.module.scss";
 
 type ButtonProps = {
   name: string;
-  onClick: () => void;
+  onClick?: () => void;
   color: "light" | "dark" | "secondary";
+  typeOfButton: "button" | "submit";
+  disabled?: boolean;
 };
 
-const Button: React.FC<ButtonProps> = ({ name, onClick, color }) => {
+const Button: React.FC<ButtonProps> = ({
+  name,
+  onClick,
+  color,
+  typeOfButton,
+  disabled,
+}) => {
   let style = `${styles.container} `;
   if (color === "dark") {
     style += `${styles.dark}`;
@@ -16,7 +24,13 @@ const Button: React.FC<ButtonProps> = ({ name, onClick, color }) => {
     style += `${styles.light}`;
   }
   return (
-    <button type="button" aria-label={name} onClick={onClick} className={style} disabled={false}>
+    <button
+      type={typeOfButton}
+      aria-label={name}
+      onClick={onClick}
+      className={style}
+      disabled={disabled}
+    >
       {name}
     </button>
   );

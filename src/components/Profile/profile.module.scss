@@ -105,8 +105,7 @@
 
   .buttonSecondary {
     background-color: $secondary-color-600;
-    transform: rotate(-0.25turn);
-
+    transform: rotate(-45deg);
 
     &:hover {
       background-color: $primary-color-200;

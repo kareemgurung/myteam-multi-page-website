@@ -59,6 +59,7 @@ const Header = () => {
             }}
             name="contact us"
             color="light"
+            typeOfButton="button"
           />
         </div>
         <div

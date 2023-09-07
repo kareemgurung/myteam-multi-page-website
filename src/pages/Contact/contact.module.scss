@@ -1,0 +1,139 @@
+@import "../../styles/mixins";
+
+main {
+  background-color: $primary-color-100;
+}
+
+.container {
+  @include flexCenter(column);
+  padding: 80px 24px 88px;
+  gap: 56px;
+
+  color: $primary-color-300;
+
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: url("../../../public/images/bg-pattern-contact-2.svg");
+    position: absolute;
+    bottom: -120px;
+    right: -100px;
+  }
+
+  @include tablet {
+    padding: 112px 115px 112px 113px;
+    gap: 64px;
+
+    &::before {
+      content: url("../../../public/images/bg-pattern-about-2-contact-1.svg");
+      position: absolute;
+      top: 104px;
+      left: -100px;
+    }
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+
+  @include desktop {
+    @include maxWidth;
+    @include flexCenter(row);
+    padding: 120px 0 128px;
+    overflow: visible;
+    gap: 32px;
+
+    &::before {
+      left: -265px;
+    }
+
+    &::after {
+      bottom: -5px;
+      right: -265px;
+    }
+  }
+}
+
+.info {
+  @include flexCenter(column);
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px; /* 100% */
+  }
+
+  h2 {
+    color: $primary-color-200;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  p {
+    font-size: 18px;
+
+    font-weight: 700;
+    line-height: 28px; /* 155.556% */
+  }
+
+  div {
+    @include flexCenter(column);
+    align-items: center;
+    gap: 16px;
+  }
+
+  ul {
+    @include flexCenter(column);
+    gap: 24px;
+    list-style: none;
+
+    li {
+      @include flexCenter(row);
+      align-items: center;
+      text-align: left;
+      gap: 23px;
+    }
+  }
+
+  @include tablet {
+    gap: 24px;
+
+    h1 {
+      font-size: 64px;
+      line-height: 56px;
+    }
+
+    div {
+      gap: 24px;
+    }
+
+    ul {
+      gap: 8px;
+
+      li {
+        gap: 23px;
+      }
+    }
+  }
+
+  @include desktop {
+    align-items: flex-start;
+    text-align: left;
+    gap: 32px;
+    flex: 1;
+    
+    h1 {
+      line-height: 100px;
+    }
+
+    div {
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+}

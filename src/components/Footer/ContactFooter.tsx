@@ -12,6 +12,7 @@ const ContactFooter = () => {
           onClick={() => navigate("./contact")}
           name="contact us"
           color="dark"
+          typeOfButton="button"
         />
       </div>
     </div>
