@@ -45,7 +45,7 @@
 
   background-color: $primary-color-100;
 
-  nav {
+  ul {
     @include flexCenter(column);
     gap: 24px;
     list-style: none;
@@ -129,7 +129,7 @@
     align-items: center;
     justify-content: space-between;
 
-    nav {
+    ul {
       @include flexCenter(row);
       gap: 40px;
     }

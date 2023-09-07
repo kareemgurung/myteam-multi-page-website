@@ -35,7 +35,7 @@
         flex-shrink: 0;
       }
 
-      nav {
+      ul {
         @include flexCenter(row);
         gap: 24px;
         list-style: none;
@@ -77,7 +77,7 @@
     justify-content: center;
     gap: 16px;
 
-    nav {
+    ul {
       @include flexCenter(row);
       align-items: center;
       justify-content: space-between;

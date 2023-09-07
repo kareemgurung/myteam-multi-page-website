@@ -40,7 +40,7 @@ const Header = () => {
           >
             <img src="../../../images/icon-close.svg" alt="hamburger icon" />
           </button>
-          <nav>
+          <ul>
             <li>
               <Link to="/" onClick={() => showMenuHandler()}>
                 home
@@ -51,7 +51,7 @@ const Header = () => {
                 about
               </Link>
             </li>
-          </nav>
+          </ul>
           <Button
             onClick={() => {
               navigate("/contact");

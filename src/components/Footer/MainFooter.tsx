@@ -11,14 +11,14 @@ const MainFooter = () => {
             <Link to="/">
               <img src="../../../images/logo.svg" alt="my team logo" />
             </Link>
-            <nav>
+            <ul>
               <li>
                 <Link to="/">home</Link>
               </li>
               <li>
                 <Link to="/about">about</Link>
               </li>
-            </nav>
+            </ul>
           </div>
           <div className={styles.address}>
             <p>987 Hillcrest Lane</p>
@@ -28,7 +28,7 @@ const MainFooter = () => {
           </div>
         </div>
         <div className={styles.socialLinks}>
-          <nav>
+          <ul>
             <li>
               <Social name="facebook" image="../../../images/icon-facebook.svg"/>
             </li>
@@ -38,7 +38,7 @@ const MainFooter = () => {
             <li>
             <Social name="twitter" image="../../../images/icon-twitter.svg"/>
             </li>
-          </nav>
+          </ul>
           <p>Copyright 2020. All Rights Reserved</p>
         </div>
       </div>
