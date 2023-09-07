@@ -4,8 +4,6 @@ import styles from "./form.module.scss";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { TContactSchema, contactSchema } from "../../types/message";
 
-
-
 const Form = () => {
   const {
     register,
